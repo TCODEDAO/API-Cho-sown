@@ -1146,7 +1146,7 @@ caption {
 	<p class="title">Chạy code này và nhìn cái console</p>
 
 	<div class="code-language">
-<span class="text-orange">fetch</span>(<span class="text-green">'https://jsonplaceholder.typicode.com/todos/1'</span>) <br/>
+<span class="text-orange">fetch</span>(<span class="text-green">'https://jsonplaceholder.typicode.com/api/v1/video'</span>) <br/>
   	&nbsp; <span class="text-orange">.then</span>(response => response<span class="text-orange">.json</span>())<br/>
   	&nbsp; <span class="text-orange">.then</span>(json => console<span class="text-orange">.log</span>(json))
 	</div>
@@ -1161,11 +1161,11 @@ Chạy code
 </div >
 <div style="margin: 15px;">
 <h3 class="title">Endpoint nè!</h3>
-<p>GET &nbsp; &nbsp; <a href="/video">/video</a></p>
-<p>GET &nbsp; &nbsp; <a href="/video/630a1db804a7e63dfc71091c">/video/:id</a></p>
-<p>POST &nbsp; &nbsp; /video</p>
-<p>PUT &nbsp; &nbsp; /video/:id</p>
-<p>DELETE &nbsp; &nbsp; /video/:id</p>
+<p>GET &nbsp; &nbsp; <a href="/api/v1/video">/api/v1/video</a></p>
+<p>GET &nbsp; &nbsp; <a href="/api/v1/video/630a1db804a7e63dfc71091c">/api/v1/video/:id</a></p>
+<p>POST &nbsp; &nbsp; /api/v1/video</p>
+<p>PUT &nbsp; &nbsp; /api/v1/video/:id</p>
+<p>DELETE &nbsp; &nbsp; /api/v1/video/:id</p>
 <p>PATCH cái này chắc PUT là đủ rồi</p>
 </div>
 </body>
@@ -1175,7 +1175,7 @@ const dataReturn = document.querySelector('.data-return > .code-language')
 
 	
 button.onclick = async function (event) {
-  const {data}= await(await fetch('/video')).json()
+  const {data}= await(await fetch('/api/v1/video')).json()
 dataReturn.innerHTML = `
 [
 	{   
