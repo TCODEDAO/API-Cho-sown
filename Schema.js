@@ -9,4 +9,5 @@ const Video = new mongoose.Schema({
 	timestamps: true 
 })
 
+
 module.exports = mongoose.model('videos',Video)
