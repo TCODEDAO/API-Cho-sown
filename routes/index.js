@@ -108,7 +108,7 @@ artist,
 duration,
 audio,
 thumbnail,
-coverImage,isActive,} = req.body;
+coverImage,isActive,id} = req.body;
  
   const isDuplicate = await Audio.find({ name: name, audio: audio });
 
@@ -118,6 +118,7 @@ coverImage,isActive,} = req.body;
   }
   try {
     let newaudio = new Audio({
+      id,
       name,
 artist,
 duration,
